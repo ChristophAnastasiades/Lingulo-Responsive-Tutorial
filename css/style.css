@@ -132,14 +132,30 @@ nav ul li a:hover
         color:#E56038;
 }
 
-#alternative_menu
+#mobileMenu
 {
-        width: 150px;
-        position:absolute;
-        top:100px;
-        left:50%;
-        margin-left: -75px;
-        display:none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+}
+
+#mobileMenu ul li
+{
+        display:block;
+        background-color: #E56038;
+        color: #fff;
+        padding: 12px 0;
+        letter-spacing: 0.1em;
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 1px solid #CC5836;
+}
+
+.toggleMobile
+{
+        display: none;
 }
 
 /* 3 COLUMNS */
@@ -522,7 +538,8 @@ footer .wrapper .column h4
 
 
 /* SKIPLINK */
-.go-top {
+.go-top
+{
         position: fixed;
         bottom: 2em;
         right: 2em;
@@ -534,7 +551,8 @@ footer .wrapper .column h4
         display: none;
 }
 
-.go-top:hover {
+.go-top:hover
+{
         background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -547,7 +565,7 @@ footer .wrapper .column h4
 }
 #slides
 {
-  display: none
+        display: none
 }
 
 /* Center the slideshow */
@@ -561,7 +579,7 @@ footer .wrapper .column h4
 /* Show active item in the pagination */
 .slidesjs-pagination .active
 {
-  color:red;
+        color:red;
 }
 
 #slider_content1 p .responsive_button, #slider_content2 p .responsive_button, #slider_content3 p  .responsive_button
@@ -728,6 +746,11 @@ footer .wrapper .column h4
 
 @media (max-width: 500px)
 {
+        header
+        {
+            margin-top: 80px;
+            text-align: center;
+        }        
         #spacer
         {
                 height:auto;
@@ -765,9 +788,71 @@ footer .wrapper .column h4
         {
                 width:auto;
         }
-        #alternative_menu
+        #mobileMenu
         {
-                display:block;
+                display: block;
+                z-index: 99;
+        }
+        .toggleMobile
+        {
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                display: block;
+                width: 40px;
+                height: 36px;
+                cursor: pointer;
+                z-index: 999;
+        }
+        .toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3
+        {
+                display: block;
+                position: absolute;
+                width: 40px;
+                height: 8px;
+                left: 0;
+                background: #EDA28C;
+                -webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+                transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+        }
+        .toggleMobile span.menu1
+        {
+                top: 0;
+        }
+        .toggleMobile span.menu2
+        {
+                top: 14px;
+        }
+        .toggleMobile span.menu3
+        {
+                top: 28px;
+        }
+        .toggleMobile.active span.menu1
+        {
+                top: 14px;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+                transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+        }
+        .toggleMobile.active span.menu2
+        {
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+                transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+        }
+        .toggleMobile.active span.menu3
+        {
+                opacity: 0;
+                -webkit-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+                transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
         }
         header nav
         {
