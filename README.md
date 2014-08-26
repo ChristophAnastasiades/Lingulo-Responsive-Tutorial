@@ -9,6 +9,9 @@ Feel free to use it for your personal or commercial projects and/or change it in
 I would be happy if you put a link to http://www.lingulo.com somewhere on your website to support my work.
 
 
+
+
+<br/><br/>
 <b>What you need to do to make this page work</b>:
 
 - Find images for the jQuery Slider and for all the icons (the icons used in the tutorial are from http://www.iconarchive.com/show/icons8-metro-style-icons-by-visualpharm.1.html) or even better use a font like FontAwesome for the icons
